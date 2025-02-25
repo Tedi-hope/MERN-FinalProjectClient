@@ -15,7 +15,7 @@ const Login = () => {
    const handleLogin=()=>{
     //console.log('handle login is called');
     axios
-    .post('https://my-work-out-gym-server.vercel.app/user/login',{email,password})
+    .post('http://localhost:8888/user/login',{email,password})
     .then((response)=>{
       const {email, userId,token}=response.data;
       console.log('Email',email);
@@ -34,15 +34,15 @@ const Login = () => {
   return (
     <>
      <Nav />
-     <div className="container-fluid h-screen px-3 py-5 bg-slate-100 w-full">
+     <div className="container-fluid h-screen px-3 py-5 bg-lightBlue w-full">
           <div className="flex flex-col justify-center items-center h-4/5 w-full">
-            <form className="w-1/4 px-3 py-6 bg-white rounded-md">
-            <h3 className="mb-2 font-bold">Login</h3>
-             <label>Email Address:</label><br />
+            <form className="w-1/4 px-3 py-6 bg-white rounded-md border-2 border-lightBlue">
+            <h2 className="mb-2 font-bold text-lg text-lightBlue">Login</h2>
+             <label className="text-lightBlue font-bold">Email Address:</label><br />
              <input type="text" className="py-1 mb-7 mt-2 w-11/12 border-2" 
               value={email} 
               onChange={(e)=>setEmail(e.target.value)} /><br />
-             <label>Password:</label><br />
+             <label className="text-lightBlue font-bold">Password:</label><br />
              <input type="password" className="py-1 mb-7 mt-2 w-11/12 border-2" 
               value={password} 
               onChange={(e)=>setPassword(e.target.value)} /><br />
