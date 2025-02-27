@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import Footer from '../components/Footer';
 
 const DeleteGymInfo = () => {
     const navigate=useNavigate();
@@ -17,6 +18,7 @@ const DeleteGymInfo = () => {
         });
     }
   return (
+    <>
     <div className="container-fluid h-screen px-3 py-5 bg-slate-100 w-full">
           <div className="flex flex-col justify-center items-center h-4/5 w-full bg-slate-400">
             <h5>Are you sure you want to delete the gym-info?</h5>
@@ -26,6 +28,8 @@ const DeleteGymInfo = () => {
                onClick={handleDeleteGymInfo}>Yes,Delete it</button>
           </div>
      </div>
+     <Footer/>
+     </>
   )
 }
 

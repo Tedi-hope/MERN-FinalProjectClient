@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import DeleteGymInfo from './pages/DeleteGymInfo'
 import Schedule from './pages/Schedule'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
        <Route path='/home' element={<Home />} />
        <Route path='/signup' element={<SignUp />} />
        <Route path='/schedule' element={<Schedule />} />
+       <Route path='/footer' />
        <Route path='/gym/delete/:id' element={<DeleteGymInfo />} />
      </Routes>
     </BrowserRouter>

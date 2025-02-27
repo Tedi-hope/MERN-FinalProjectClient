@@ -3,7 +3,7 @@ import react ,{useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
-
+import Footer from '../components/Footer';
 
 const Login = () => {
    const [email,setEmail]=useState('');
@@ -22,6 +22,7 @@ const Login = () => {
       localStorage.setItem('email',email);
       localStorage.setItem('userId',userId);
       localStorage.setItem('token',token);
+      
       enqueueSnackbar('Login Successful', { variant: 'success' });
       navigate('/home',{state:{email}});
 
@@ -36,7 +37,7 @@ const Login = () => {
      <Nav />
      <div className="container-fluid h-screen px-3 py-5 bg-lightBlue w-full">
           <div className="flex flex-col justify-center items-center h-4/5 w-full">
-            <form className="w-1/4 px-3 py-6 bg-white rounded-md border-2 border-lightBlue">
+            <form className="w-11/12 md:w-1/4 px-3 py-6 bg-white rounded-md border-2 border-lightBlue">
             <h2 className="mb-2 font-bold text-lg text-lightBlue">Login</h2>
              <label className="text-lightBlue font-bold">Email Address:</label><br />
              <input type="text" className="py-1 mb-7 mt-2 w-11/12 border-2" 
@@ -53,6 +54,7 @@ const Login = () => {
             </form>
           </div>
      </div>
+     <Footer/>
     </>
     
   )

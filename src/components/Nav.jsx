@@ -20,7 +20,7 @@ const Nav = () => {
         <div className="flex justify-between items-center ">
           <div className="flex space-x-3">
              <img src={gymlogot} alt="gym logo" className="w-28 h-18 hover:scale-95" />
-             <h2 className=" text-base font-bold uppercase mt-10">My WorkOut GYM</h2>
+             <h2 className=" text-base font-bold uppercase mt-10 hidden md:flex">My WorkOut GYM</h2>
           </div>
           <div className="mx-2 text-base space-x-7">
             <Link to='/home' className="hover:text-orange-600 ">Home</Link>
