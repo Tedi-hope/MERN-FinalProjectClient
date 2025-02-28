@@ -13,10 +13,10 @@ const Schedule = () => {
       </div>
       <div className="flex flex-col px-1 py-4 overflow-x-auto">
         <table className="text-white w-full min-w-max border-separate border-spacing-2 
-        border border-gray-400 dark:border-gray-500">
+        border border-gray-400 dark:border-gray-500 h-80">
           <thead>
             <tr>
-               <th className="px-4 py-2 border border-gray-500">Monday</th>
+               <th  className="px-4 py-2 border border-gray-500">Monday</th>
                <th className="px-4 py-2 border border-gray-500">Tuesday</th>
                <th className="px-4 py-2 border border-gray-500">Wednsday</th>
                <th className="px-4 py-2 border border-gray-500">Thursday</th>

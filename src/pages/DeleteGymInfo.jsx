@@ -9,7 +9,7 @@ const DeleteGymInfo = () => {
 
     const handleDeleteGymInfo=()=>{
         axios
-        .delete(`http://localhost:8888/gym/${id}`)
+        .delete(`https://mern-final-project-server.vercel.app/gym/${id}`)
         .then(()=>{
             navigate('/home');
         })

@@ -29,10 +29,11 @@ const Home = () => {
     }
 
     //fetch membership duration
-    axios.get(`http://localhost:8888/user/membership-duration/${emailLocal}`)
+    axios.get(`https://mern-final-project-server.vercel.app/user/membership-duration/${emailLocal}`)
     .then((res)=>{
       setDurationDays(res.data.durationInDays);
-      console.log(res.data.durationInDays);
+      //console.log(res.data.durationInDays);
+      //console.log(typeof(res.data.durationInDays));
     })
     .catch((err)=>{
       console.error("Error fetching membership duration:",err);
@@ -69,7 +70,7 @@ const Home = () => {
 
     };
     axios
-     .post('http://localhost:8888/gym',gymData)
+     .post('https://mern-final-project-server.vercel.app/gym',gymData)
      .then((res)=>{
        console.log(res.data)
        setGymInfo([...gymInfo,res.data]);//Update state to add new entry
@@ -84,7 +85,7 @@ const Home = () => {
   
   useEffect(()=>{
    axios
-       .get('http://localhost:8888/gym')
+       .get('https://mern-final-project-server.vercel.app/gym')
        .then((res)=>{
          setGymInfo(res.data.data || []);//Ensure it is an array
          //console.log(res.data.data);
@@ -99,8 +100,8 @@ const Home = () => {
       <div className="container-fluid px-4 py-2 bg-darker">
         <div className="flex justify-between items-center ">
           <div className="flex">
-             <img src={gymlogot} alt="Gym logo" className="w-28 h-18 hover:scale-95" />
-             <h1 className="text-white text-lg font-bold uppercase mt-10 hidden lg:flex">My WorkOut GYM</h1>
+             <img src={gymlogot} alt="Gym logo" className="w-32 h-22 hover:scale-95 animate-pulse" />
+             <h1 className="text-white text-lg font-bold uppercase mt-10 hidden lg:flex animate-bounce">My WorkOut GYM</h1>
           </div>
           <div className="flex space-x-14 ">
             <p className="text-white text-base mt-1.5 hidden md:flex">{emailLocal}</p>
